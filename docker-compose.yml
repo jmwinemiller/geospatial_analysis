@@ -1,0 +1,12 @@
+version: "3"
+services:
+  interactive_map:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"
+    hostname: "localhost"
+    volumes:
+      - "./notebooks:/home/jupyter"
+      - "./data:/home/jupyter/data"
